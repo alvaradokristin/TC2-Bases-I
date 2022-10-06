@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj",
+        "projectName": "TC2-Bases",
+        "projectPath": "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj",
+        "packagesPath": "C:\\Users\\kag07\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kag07\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
