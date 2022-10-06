@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
+using TC2_Bases.Models;
 
 namespace TC2_Bases.Pages
 {
@@ -14,7 +17,6 @@ namespace TC2_Bases.Pages
 
         public void OnGet()
         {
-
         }
     }
 }

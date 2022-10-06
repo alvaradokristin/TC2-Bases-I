@@ -1,0 +1,65 @@
+﻿@page
+@model TC2_Bases.Pages.Add.AddClientModel
+@{
+}
+
+<br />
+<h2>Registrar Cliente</h2>
+<br />
+
+@*IN CASE THERE IS AN ERROR, IT WILL BE VISIBLE ON THE PAGE FOR THE USER TO KNOW*@
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-desmissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+
+@*FORM TO GET THE USER INPUT TO UPDATE THE DATABASE*@
+<form method="post">
+    <div class="mb-3">
+        <label for="client-id" class="form-label">Cedula del cliente:</label>
+        <input type="text" class="form-control" id="client-id" name="client-id" value="@Model.clntInfo.id">
+    </div>
+
+    <div class="mb-3">
+        <label for="client-name" class="form-label">Nombre del cliente:</label>
+        <input type="text" class="form-control" id="client-name" name="client-name" value="@Model.clntInfo.name">
+    </div>
+
+    <div class="mb-3">
+        <label for="client-flastname" class="form-label">Primer apellido:</label>
+        <input type="text" class="form-control" id="client-flastname" name="client-flastname" value="@Model.clntInfo.flastname">
+    </div>
+
+    <div class="mb-3">
+        <label for="client-slastname" class="form-label">Segundo apellido:</label>
+        <input type="text" class="form-control" id="client-slastname" name="client-slastname" value="@Model.clntInfo.slastname">
+    </div>
+
+    <div class="mb-3">
+        <label for="client-address" class="form-label">Direccion:</label>
+        <textarea class="form-control" id="client-address" rows="3" name="client-address" value="@Model.clntInfo.address"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label for="client-phone" class="form-label">Numero de telefono:</label>
+        <input type="text" class="form-control" id="client-phone" name="client-phone" placeholder="xxxx-xxxx" value="@Model.clntPhnInfo.phoneNumber">
+    </div>
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="alert alert-success alert-desmissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+        </div>
+    }
+
+    <div class="mb-3">
+    <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+        <a asp-page="/Add/AddCar" class="link-info pl-4"> Siguiente -> </a>
+    </div>
+</form>

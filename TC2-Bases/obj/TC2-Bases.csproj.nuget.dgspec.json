@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj": {}
+    "C:\\Users\\Krispin\\Documents\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj": {
+    "C:\\Users\\Krispin\\Documents\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj",
+        "projectUniqueName": "C:\\Users\\Krispin\\Documents\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj",
         "projectName": "TC2-Bases",
-        "projectPath": "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj",
-        "packagesPath": "C:\\Users\\kag07\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kag07\\OneDrive\\Documentos\\GitHub\\TC2-Bases-I\\TC2-Bases\\obj\\",
+        "projectPath": "C:\\Users\\Krispin\\Documents\\GitHub\\TC2-Bases-I\\TC2-Bases\\TC2-Bases.csproj",
+        "packagesPath": "C:\\Users\\Krispin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Krispin\\Documents\\GitHub\\TC2-Bases-I\\TC2-Bases\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kag07\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Krispin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.30, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

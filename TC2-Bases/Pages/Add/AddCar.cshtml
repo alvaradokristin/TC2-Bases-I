@@ -1,0 +1,48 @@
+﻿@page
+@model TC2_Bases.Pages.Add.AddCarModel
+@{
+}
+
+<br />
+<h2>Registrar Vehiculo</h2>
+<br />
+
+@*IN CASE THERE IS AN ERROR, IT WILL BE VISIBLE ON THE PAGE FOR THE USER TO KNOW*@
+@if (Model.errorMessage.Length > 0)
+{
+        <div class="alert alert-warning alert-desmissible fade show" role="alert">
+            <strong>@Model.errorMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+}
+
+@*FORM TO GET THE USER INPUT TO UPDATE THE DATABASE*@
+<form method="post">
+    <div class="mb-3">
+        <label for="car-license-plate" class="form-label">Placa del carro:</label>
+        <input type="text" class="form-control" id="car-license-plate" name="car-license-plate">@*value="@Model.carInfo.id"*@
+    </div>
+
+    <div class="mb-3">
+        <label for="car-brand" class="form-label">Marca del carro:</label>
+        <select class="form-select" id="car-brand" name="car-brand">
+            @foreach (var item in Model.brandsList)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="car-model" class="form-label">Modelo del carro:</label>
+        <select class="form-select" id="car-model" name="car-model">
+            @foreach (var item in Model.modelsList)
+            {
+                if (item.brand == Request.Form["car-brand"])
+                {
+                    <option value="@item">@item</option>
+                }
+            }
+        </select>
+    </div>
+</form>

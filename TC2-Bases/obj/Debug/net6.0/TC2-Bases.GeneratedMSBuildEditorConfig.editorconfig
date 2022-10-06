@@ -8,37 +8,45 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TC2_Bases
 build_property.RootNamespace = TC2_Bases
-build_property.ProjectDir = C:\Users\kag07\OneDrive\Documentos\GitHub\TC2-Bases-I\TC2-Bases\
+build_property.ProjectDir = C:\Users\Krispin\Documents\GitHub\TC2-Bases-I\TC2-Bases\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kag07\OneDrive\Documentos\GitHub\TC2-Bases-I\TC2-Bases
+build_property.MSBuildProjectDirectory = C:\Users\Krispin\Documents\GitHub\TC2-Bases-I\TC2-Bases
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kag07/OneDrive/Documentos/GitHub/TC2-Bases-I/TC2-Bases/Pages/Error.cshtml]
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Add/AddCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkXEFkZENhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Add/AddClient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkXEFkZENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kag07/OneDrive/Documentos/GitHub/TC2-Bases-I/TC2-Bases/Pages/Index.cshtml]
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kag07/OneDrive/Documentos/GitHub/TC2-Bases-I/TC2-Bases/Pages/Privacy.cshtml]
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kag07/OneDrive/Documentos/GitHub/TC2-Bases-I/TC2-Bases/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kag07/OneDrive/Documentos/GitHub/TC2-Bases-I/TC2-Bases/Pages/_ViewImports.cshtml]
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kag07/OneDrive/Documentos/GitHub/TC2-Bases-I/TC2-Bases/Pages/_ViewStart.cshtml]
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kag07/OneDrive/Documentos/GitHub/TC2-Bases-I/TC2-Bases/Pages/Shared/_Layout.cshtml]
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-y4qp26oxdx
