@@ -13,11 +13,6 @@ namespace TC2_Bases.Pages.Add
         public String errorMessage = "";
         public String successMessage = "";
 
-        // Method to GET information from the DB
-        public void OnGet()
-        {
-        }
-
         // Method to SEND information to the DB
         public void OnPost()
         {
@@ -86,7 +81,7 @@ namespace TC2_Bases.Pages.Add
             clntPhnInfo.clientId = "";
             clntPhnInfo.phoneNumber = "";
 
-            successMessage = "La aplicacion se agrego con exito a la base de datos";
+            successMessage = "La informacion se agrego con exito a la base de datos";
         }
     }
 }

@@ -1,0 +1,42 @@
+﻿@page
+@model TC2_Bases.Pages.Add.AddMechanicModel
+@{
+}
+
+<br />
+<h2>Registrar Mecanico</h2>
+<br />
+
+@*IN CASE THERE IS AN ERROR, IT WILL BE VISIBLE ON THE PAGE FOR THE USER TO KNOW*@
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-desmissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+
+@*FORM TO GET THE USER INPUT TO UPDATE THE DATABASE*@
+<form method="post">
+    <div class="mb-3">
+        <label for="mechanic-id" class="form-label">Cedula:</label>
+        <input type="text" class="form-control" id="mechanic-id" name="mechanic-id" value="@Model.mchInfo.id">
+    </div>
+
+    <div class="mb-3">
+        <label for="mechanic-name" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="mechanic-name" name="mechanic-name" value="@Model.mchInfo.name">
+    </div>
+
+    <div class="mb-3">
+        <label for="mechanic-flastname" class="form-label">Primer apellido:</label>
+        <input type="text" class="form-control" id="mechanic-flastname" name="mechanic-flastname" value="@Model.mchInfo.flastname">
+    </div>
+
+    <div class="mb-3">
+        <label for="mechanic-slastname" class="form-label">Segundo apellido:</label>
+        <input type="text" class="form-control" id="mechanic-slastname" name="mechanic-slastname" value="@Model.mchInfo.slastname">
+    </div>
+
+    <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+</form>

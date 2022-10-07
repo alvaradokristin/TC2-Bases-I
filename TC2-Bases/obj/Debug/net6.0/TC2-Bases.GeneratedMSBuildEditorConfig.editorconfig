@@ -15,12 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Krispin\Documents\GitHub\TC2-Bases-I\TC2-Bases
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Add/AddActivity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkXEFkZEFjdGl2aXR5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Add/AddCar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkXEFkZENhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Add/AddClient.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkXEFkZENsaWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Add/AddMechanic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkXEFkZE1lY2hhbmljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Add/AddSpare.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkXEFkZFNwYXJlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Krispin/Documents/GitHub/TC2-Bases-I/TC2-Bases/Pages/Error.cshtml]
