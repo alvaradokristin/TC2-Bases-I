@@ -2,7 +2,7 @@
 {
     public class ClientPhoneInfo
     {
-        public string clientId { get; set; }
-        public string phoneNumber { get; set; }
+        public string? clientId { get; set; }
+        public string? phoneNumber { get; set; }
     }
 }
