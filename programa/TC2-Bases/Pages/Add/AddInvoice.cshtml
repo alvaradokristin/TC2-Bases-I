@@ -1,0 +1,64 @@
+﻿@page
+@model TC2_Bases.Pages.Add.AddInvoiceModel
+@{
+}
+
+<br />
+<h2>Crear Factura</h2>
+<br />
+
+@*IN CASE THERE IS AN ERROR, IT WILL BE VISIBLE ON THE PAGE FOR THE USER TO KNOW*@
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-desmissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+
+@*FORM TO GET THE USER INPUT TO UPDATE THE DATABASE*@
+<form method="post">
+    <div class="mb-3">
+        <label for="invoice-consec" class="form-label">Consecutivo de la factura:</label>
+        <input type="text" class="form-control" id="invoice-consec" name="invoice-consec" value="@Model.invcInfo.consecutive">
+    </div>
+
+    <div class="mb-3">
+        <label for="invoice-year" class="form-label">Año:</label>
+        <input type="text" class="form-control" id="invoice-year" name="invoice-year" placeholder="AAAA" value="@Model.invcInfo.year">
+    </div>
+
+    <div class="mb-3">
+        <label for="invoice-name" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="invoice-name" name="invoice-name" value="@Model.invcInfo.name">
+    </div>
+
+    <div class="mb-3">
+        <label for="invoice-repair-consec" class="form-label">Consecutivo de la reparación:</label>
+        <select class="form-select" id="invoice-repair-consec" name="invoice-repair-consec">
+            <option value=""></option>
+            @foreach (var item in Model.repairsList)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>
+
+    <div class="alert alert-secondary mb-3" role="alert">
+        <code><strong>El precio sera calculado automaticamante basado en la reparación (tomando en cuenta los repuestos y la mano de obra)</strong></code>
+    </div>
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="alert alert-success alert-desmissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+        </div>
+    }
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+    </div>
+</form>

@@ -1,0 +1,82 @@
+﻿@page
+@model TC2_Bases.Pages.Add.AddCarModel
+@{
+}
+
+<br />
+<h2>Registrar Vehiculo</h2>
+<br />
+
+@*IN CASE THERE IS AN ERROR, IT WILL BE VISIBLE ON THE PAGE FOR THE USER TO KNOW*@
+@if (Model.errorMessage.Length > 0)
+{
+        <div class="alert alert-warning alert-desmissible fade show" role="alert">
+            <strong>@Model.errorMessage</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+}
+
+@*FORM TO GET THE USER INPUT TO UPDATE THE DATABASE*@
+<form method="post">
+    <div class="mb-3">
+        <label for="car-license-plate" class="form-label">Placa del carro:</label>
+        <input type="text" class="form-control" id="car-license-plate" name="car-license-plate" value="@Model.carInfo.licensePlate">
+    </div>
+
+    <div class="mb-3">
+        <label for="car-brand" class="form-label">Marca del carro:</label>
+        <select class="form-select" id="car-brand" name="car-brand">
+            <option value=""></option>
+            @foreach (var item in Model.brandsList)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="car-model" class="form-label">Modelo del carro:</label>
+        <select class="form-select" id="car-model" name="car-model">
+            <option value=""></option>
+            @foreach (var item in Model.modelsList)
+            {
+                @*if (item.brand == Request.Form["car-brand"])
+                {
+                    <option value="@item">@item</option>
+                }*@
+                <option value="@item.model">@item.model</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="car-year" class="form-label">Año del carro:</label>
+        <input type="text" class="form-control" id="car-year" name="car-year" value="@Model.carInfo.year" placeholder="AAAA">
+    </div>
+
+    <div class="mb-3">
+        <label for="car-color" class="form-label">Color del carro:</label>
+        <select class="form-select" id="car-color" name="car-color">
+            <option value=""></option>
+            @foreach (var item in Model.colorList)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="alert alert-success alert-desmissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+        </div>
+    }
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+        <a asp-page="/Add/AddSpare" class="link-info pl-4"> Siguiente -> </a>
+    </div>
+</form>

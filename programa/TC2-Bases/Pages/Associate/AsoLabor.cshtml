@@ -1,0 +1,56 @@
+﻿@page
+@model TC2_Bases.Pages.Associate.AsoLaborModel
+@{
+}
+
+<br />
+<h2>Agregue Actividades de Mano de Obra a una Reparación</h2>
+<br />
+
+@*IN CASE THERE IS AN ERROR, IT WILL BE VISIBLE ON THE PAGE FOR THE USER TO KNOW*@
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-desmissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+
+@*FORM TO GET THE USER INPUT TO UPDATE THE DATABASE*@
+<form method="post">
+    <div class="mb-3">
+        <label for="laborxrep-repair-consec" class="form-label">Seleccione el consecutivo de la reparación:</label>
+        <select class="form-select" id="laborxrep-repair-consec" name="laborxrep-repair-consec">
+            <option value=""></option>
+            @foreach (var item in Model.consecsList)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="laborxrep-labor" class="form-label">Seleccione el consecutivo de la reparación:</label>
+        <select class="form-select" id="laborxrep-labor" name="laborxrep-labor">
+            <option value=""></option>
+            @foreach (var item in Model.activitiesList)
+            {
+                <option value="@item.id">@item.name</option>
+            }
+        </select>
+    </div>
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="alert alert-success alert-desmissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+        </div>
+    }
+
+    <div class="mb-3">
+        <button type="submit" class="btn btn-outline-secondary">Asignar</button>
+    </div>
+</form>

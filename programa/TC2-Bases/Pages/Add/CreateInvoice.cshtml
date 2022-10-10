@@ -1,0 +1,170 @@
+﻿@page
+@model TC2_Bases.Pages.Add.CreateInvoiceModel
+@{
+    // Get the code from the URL query
+    String consecutive = Request.Query["code"];
+}
+
+<br />
+<h2>Factura para la Reparación: @consecutive</h2>
+<br />
+
+@*SHOW THE CLIENT NAD CAR INFO*@
+<div class="mb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h4>Cliente</h4>
+                <p><code><strong>Cedula:</strong></code> @Model.invcBasic.clientId</p>
+                <p><code><strong>Nombre:</strong></code> @Model.invcBasic.clientName</p>
+                <p><code><strong>Dirección:</strong></code> @Model.invcBasic.clientAddress</p>
+            </div>
+
+            <div class="col-sm">
+                <h4>Vehiculo</h4>
+                <p><code><strong>Placa:</strong></code> @Model.invcBasic.carLicensePlate</p>
+                <p><code><strong>Marca:</strong></code> @Model.invcBasic.carBrand</p>
+                <p><code><strong>Modelo:</strong></code> @Model.invcBasic.carModel</p>
+                <p><code><strong>Año:</strong></code> @Model.invcBasic.carYear</p>
+                <p><code><strong>Color:</strong></code> @Model.invcBasic.carColor</p>
+            </div>
+        </div>
+    </div>
+
+    <h4>Mecánicos de la Reparación</h4>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @*CREATE THE TABLES ROWS AND ASSIGN THEM THE INFORMATION FROM THE DB*@
+                @foreach (var item in Model.mechsList)
+                {
+                    <tr>
+                        <td>@item.mechanicId</td>
+                        <td>@item.consecutive</td> @*Will use consecutive to store the name*@
+                        <td>@item.mechRole</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <br />
+    <h4>Repuestos usados en la Reparación</h4>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio (unidad)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @*CREATE THE TABLES ROWS AND ASSIGN THEM THE INFORMATION FROM THE DB*@
+                @foreach (var item in Model.sparesList)
+                {
+                    <tr>
+                        <td>@item.code</td>
+                        <td>@item.name</td>
+                        <td>@item.quantity</td>
+                        <td>@item.price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <br />
+    <h4>Actividades de Mano de Obra de la Reparación</h4>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Precio (unidad)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @*CREATE THE TABLES ROWS AND ASSIGN THEM THE INFORMATION FROM THE DB*@
+                @foreach (var item in Model.activitiesList)
+                {
+                    <tr>
+                        <td>@item.code</td>
+                        <td>@item.name</td>
+                        <td>@item.price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <br />
+    <h4>Desglose del Total</h4>
+    <p><code><strong>Mano de Obra:</strong></code> @Model.invcBasic.laborSubtotal</p>
+    <p><code><strong>Repuestos:</strong></code> @Model.invcBasic.repsSubtotal</p>
+    <p><code><strong>Subtotal:</strong></code> @Model.invcBasic.subtotal</p>
+
+    <div class="alert alert-secondary mb-3" role="alert">
+        <code>Para calcular el total se toma el total de mano de obra, se aplica 5% IVA y a los repuestos 15% IVA</code>
+    </div>
+
+    <p><code><strong>Total:</strong></code> @Model.invcBasic.total</p>
+
+    <br />
+
+    <h4>Crear Factura</h4>
+    <form method="post">
+        <div class="mb-3">
+            <label for="invoice-consec" class="form-label">Consecutivo de la factura:</label>
+            <input type="text" class="form-control" id="invoice-consec" name="invoice-consec" value="@Model.invcInfo.consecutive">
+        </div>
+
+        <div class="mb-3">
+            <label for="invoice-year" class="form-label">Año:</label>
+            <input type="text" class="form-control" id="invoice-year" name="invoice-year" placeholder="AAAA" value="@Model.invcInfo.year">
+        </div>
+
+        <div class="mb-3">
+            <label for="invoice-name" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="invoice-name" name="invoice-name" value="@Model.invcInfo.name">
+        </div>
+
+        <fieldset disabled>
+            <div class="mb-3">
+                <label for="invoice-repair-consec" class="form-label">Consecutivo de la reparación:</label>
+                <input type="text" class="form-control" id="invoice-repair-consec" name="invoice-repair-consec" value="@consecutive">
+            </div>
+
+            <div class="mb-3">
+                <label for="invoice-total" class="form-label">Total:</label>
+                <input type="text" class="form-control" id="invoice-total" name="invoice-total" value="@Model.invcBasic.total">
+            </div>
+        </fieldset>
+
+        @if (Model.successMessage.Length > 0)
+        {
+            <div class="row mb-3">
+                <div class="alert alert-success alert-desmissible fade show" role="alert">
+                    <strong>@Model.successMessage</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+                </div>
+            </div>
+        }
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+        </div>
+    </form>
+</div>

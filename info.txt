@@ -1,0 +1,14 @@
+Nombre del curso: Base de Datos I
+Número de semestre y año lectivo: Semestre II del 2022
+Nombre de los Estudiante:
+- Kristin Alvarado Gonzalez
+
+Número de carnet de los estudiantes: 
+- 2015096407
+
+Número de proyecto programado: Tarea #2
+Fecha de entrega: 09/10/2022
+Estatus de la entrega (debe ser CONGRUENTE con la solución entregada):  Deplorable
+---------
+
+URL del repositorio de GitHub: https://github.com/alvaradokristin/TC2-Bases-I.git

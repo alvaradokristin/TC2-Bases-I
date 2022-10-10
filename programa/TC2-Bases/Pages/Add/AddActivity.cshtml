@@ -1,0 +1,58 @@
+﻿@page
+@model TC2_Bases.Pages.Add.AddActivityModel
+@{
+}
+
+<br />
+<h2>Registrar Actividad de Mano de Obra</h2>
+<br />
+
+@*IN CASE THERE IS AN ERROR, IT WILL BE VISIBLE ON THE PAGE FOR THE USER TO KNOW*@
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-desmissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+    </div>
+}
+
+@*FORM TO GET THE USER INPUT TO UPDATE THE DATABASE*@
+<form method="post">
+    <div class="mb-3">
+        <label for="labor-code" class="form-label">Codigo de la actividad:</label>
+        <input type="text" class="form-control" id="labor-code" name="labor-code" value="@Model.sprInfo.code">
+    </div>
+
+    <div class="mb-3">
+        <label for="labor-name" class="form-label">Nombre de la actividad:</label>
+        <input type="text" class="form-control" id="labor-name" name="labor-name" value="@Model.sprInfo.name">
+    </div>
+
+    <div class="mb-3">
+        <label for="labor-price" class="form-label">Precio de la actividad:</label>
+        <input type="text" class="form-control" id="labor-price" name="labor-price" value="@Model.sprInfo.price">
+    </div>
+
+    @*<div class="mb-3">
+        <label for="labor-repair-consec" class="form-label">Reparacion a la cual se asocia:</label>
+        <select class="form-select" id="labor-repair-consec" name="labor-repair-consec">
+            <option value=""></option>
+            @foreach (var item in Model.repairsList)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+    </div>*@
+
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="alert alert-success alert-desmissible fade show" role="alert">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+        </div>
+    }
+
+    <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+</form>

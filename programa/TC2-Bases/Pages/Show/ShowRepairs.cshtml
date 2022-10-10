@@ -1,0 +1,45 @@
+﻿@page
+@model TC2_Bases.Pages.Show.ShowRepairsModel
+@{
+}
+
+<br />
+<h2>Reparaciones</h2>
+<br />
+
+@*TABLE TO SHOW THE INFORMATION FROM THE SQL TABLE*@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Consecutivo</th>
+                <th>Nombre Cliente</th>
+                <th>Taller</th>
+                <th>Placa</th>
+                <th>Mecanico Lider</th>
+                <th>Fecha</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @*CREATE THE TABLES ROWS AND ASSIGN THEM THE INFORMATION FROM THE DB*@
+            @foreach (var item in Model.listReps)
+            {
+                <tr>
+                    <td>@item.consecutive</td>
+                    <td>@item.clientId</td>
+                    <td>@item.shopId</td>
+                    <td>@item.carLicensePlate</td>
+                    <td>@item.repairLeader</td>
+                    <td>@item.repairDate</td>
+
+                    @*ADD A BUTTON TO DELETE THAT APP FROM THE BD*@
+                    <td>
+                        <a class="btn btn-outline-info" href="/Add/CreateInvoice?code=@item.consecutive">Facturar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
